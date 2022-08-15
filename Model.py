@@ -4,13 +4,10 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import pandas as pd
 
+import numpy as np
+import pandas as pd
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+df = pd.read_csv("/home/cesarfernando/Cesar/Kaggle/Titanic/test.csv")
+print(df)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
