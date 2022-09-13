@@ -2,7 +2,7 @@
 
 <img src = "Images/RMS_Titanic_3.jpg" width = 300 height = 200>
 
-![Images](Images/RMS_Titanic_3.jpg)
+<!--![Images](Images/RMS_Titanic_3.jpg)-->
 
 ## Data adquisition
 
