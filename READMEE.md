@@ -8,13 +8,34 @@
 
 - [Titanic Project, data exploration and data modeling](#titanic-project-data-exploration-and-data-modeling)
   - [Sections](#sections)
+    - [Libraries and tools used](#libraries-and-tools-used)
     - [Data adquisition](#data-adquisition)
     - [Data exploration](#data-exploration)
     - [Data preproccesing](#data-preproccesing)
 
+### Libraries and tools used
+
+```python
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+import matplotlib.pyplot as plt
+from termcolor import colored
+import seaborn as sns
+import warnings
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn import linear_model
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+warnings.simplefilter('ignore')
+import platform
+platform.system()
+```
+
 ### Data adquisition
 
-- The Data set was adquired via kaggle reposities and challengers.
+- The Data set was adquired via kaggle reposities on challenger chapter.
   - [kaggle.com](https://www.kaggle.com/competitions/titanic "Titanic Data Set")
 - It was stored in a local device and sync via GitHub.
   - [GitHub_Repository](https://github.com/Cesar421/Titanic "Cesar GitHub")
@@ -23,7 +44,9 @@
 
 Here we start the exploration of the data,
 
-| **_#_**  | **_Column_**  | **_Non-Null Count_**  | **_Dtype_**  |
+This is the .describe info of train data set
+
+| **_#_**  | **_Column_**  | **_Non-Null Count_**  | **_Dtype_**  |  
 |:-------: |:------------: |:--------------------: |:-----------: |
 |  **0**   |  PassengerId  |     891 non-null      |    int64     |
 |  **1**   |   Survived    |     891 non-null      |    int64     |
