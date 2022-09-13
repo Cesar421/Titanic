@@ -4,14 +4,22 @@
 
 <!--![Images](Images/RMS_Titanic_3.jpg)-->
 
-## Data adquisition
+## Sections
 
-* The Data set was adquired via kaggle reposities and challengers.
-  * [kaggle.com](https://www.kaggle.com/competitions/titanic "Titanic Data Set")
-* It was stored in a local device and sync via GitHub.
-  * [GitHub_Repository](https://github.com/Cesar421/Titanic "Cesar GitHub")
+- [Titanic Project, data exploration and data modeling](#titanic-project-data-exploration-and-data-modeling)
+  - [Sections](#sections)
+    - [Data adquisition](#data-adquisition)
+    - [Data exploration](#data-exploration)
+    - [Data preproccesing](#data-preproccesing)
+
+### Data adquisition
+
+- The Data set was adquired via kaggle reposities and challengers.
+  - [kaggle.com](https://www.kaggle.com/competitions/titanic "Titanic Data Set")
+- It was stored in a local device and sync via GitHub.
+  - [GitHub_Repository](https://github.com/Cesar421/Titanic "Cesar GitHub")
   
-## Data exploration
+### Data exploration
 
 Here we start the exploration of the data,
 
@@ -30,8 +38,12 @@ Here we start the exploration of the data,
 |  **10**  |     Cabin     |     204 non-null      |    object    |
 |  **11**  |   Embarked    |     889 non-null      |    object    |
 
-## Data preproccesing
+```python
+def createFeatureClass(self, location, name, excludeFields=[]):
+```
 
-* ### Numerical variables
+### Data preproccesing
+
+- #### Numerical variables
   
-* ### Categorical variables
+- #### Categorical variables
