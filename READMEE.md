@@ -1,6 +1,8 @@
 # Titanic Project, data exploration and data modeling
 
-<img src = "/home/cesarfernando/Cesar/Kaggle/Titanic/Images/RMS_Titanic_3.jpg" width = 300 height = 200>
+<img src = "Images/RMS_Titanic_3.jpg" width = 300 height = 200>
+
+![Images](Images/RMS_Titanic_3.jpg)
 
 ## Data adquisition
 
