@@ -39,7 +39,7 @@ platform.system()
 
 - The Data set was adquired via kaggle reposities on challenger chapter.
   - [kaggle.com](https://www.kaggle.com/competitions/titanic "Titanic Data Set")
-- It was stored in a local device and sync via GitHub.
+- It was stored in a local device using git for version control and sync via GitHub.
   - [GitHub_Repository](https://github.com/Cesar421/Titanic "Cesar GitHub")
   
 ### Data exploration
@@ -80,10 +80,30 @@ This is the .describe info of test data set
 |  **9**  |    **Cabin**    |     91 non-null    |   object  |
 |  **10** |   **Embarked**  |    418 non-null    |   object  |
 
+Here we can see that C
 
 ```python
-def createFeatureClass(self, location, name, excludeFields=[]):
+
+MISSING VALS IN THE TRAINING SET:
+Age         177
+Cabin       687
+Embarked      2
+dtype: int64
+
 ```
+
+<img src = "Images/output.png" width = 300 height = 200>
+
+```python
+
+MISSING VALS IN THE TEST SET:
+Age       86
+Fare       1
+Cabin    327
+dtype: int64
+
+```
+<img src = "Images/output1.png" width = 300 height = 200>
 
 ### Data preproccesing
 
