@@ -12,6 +12,8 @@
     - [Data adquisition](#data-adquisition)
     - [Data exploration](#data-exploration)
     - [Data preproccesing](#data-preproccesing)
+    - [Data Modeling](#data-modeling)
+    - [COnclusions](#conclusions)
 
 ### Libraries and tools used
 
@@ -103,10 +105,58 @@ Cabin    327
 dtype: int64
 
 ```
+
 <img src = "Images/output1.png" width = 300 height = 200>
 
 ### Data preproccesing
 
+It erase the Cabin, Name, Ticket and Cabin
+
 - #### Numerical variables
+
+```python
+numeric = ['Age', 'SibSp', 'Parch', 'Fare']
+X_numeric = df_train_original[numeric].values
+scaler = MinMaxScaler(feature_range=(0, 1))  
+X_numeric = scaler.fit_transform(X_numeric) 
+
+
+```
   
 - #### Categorical variables
+
+```python
+
+categoricalVars = ["Sex", "Embarked"]
+oneHotEncoder = OneHotEncoder(sparse=False, drop="first")
+trainEncoded = oneHotEncoder.fit_transform(df_train_original[categoricalVars])
+encoderFeatureNames = oneHotEncoder.get_feature_names(categoricalVars)
+trainEncoded = pd.DataFrame(trainEncoded,columns = encoderFeatureNames)
+train = pd.concat([df_train_original.reset_index(drop=True),trainEncoded.reset_index(drop=True)],axis=1)
+train.drop(categoricalVars,axis=1,inplace=True)
+
+```
+
+### Data Modeling
+
+Model via random forest 
+
+```python
+
+y = train["Survived"]
+print(y.shape)
+features = ["Pclass", "Sex_male", "SibSp", "Parch"]
+X = pd.get_dummies(train[features])
+print(X.shape)
+X_test = pd.get_dummies(test[features])
+print(X_test.shape)
+model = RandomForestClassifier(n_estimators=1000, max_depth=50, random_state=1)
+model.fit(X, y)
+predictions = model.predict(X_test)
+print(predictions.shape)
+print(df_test_original.shape)
+output = pd.DataFrame({'PassengerId': df_test.PassengerId, 'Survived': predictions})
+output.to_csv('my_prediction_Cesar.csv', index=False)
+```
+
+### COnclusions
