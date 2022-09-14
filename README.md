@@ -15,6 +15,8 @@
 
 ### Libraries and tools used
 
+Here are some libraries used for this projects
+
 ```python
 import numpy as np
 import pandas as pd
@@ -60,6 +62,24 @@ This is the .describe info of train data set
 |  **9**   |     Fare      |     891 non-null      |   float64    |
 |  **10**  |     Cabin     |     204 non-null      |    object    |
 |  **11**  |   Embarked    |     889 non-null      |    object    |
+
+This is the .describe info of test data set
+
+|  **#**  |    **Column**   | **Non-Null Count** | **Dtype** |
+|:-------:|:---------------:|:------------------:|:---------:|
+| **---** |    **------**   | **--------------** | **-----** |
+|  **0**  | **PassengerId** |    418 non-null    |   int64   |
+|  **1**  |    **Pclass**   |    418 non-null    |   int64   |
+|  **2**  |     **Name**    |    418 non-null    |   object  |
+|  **3**  |     **Sex**     |    418 non-null    |   object  |
+|  **4**  |     **Age**     |    332 non-null    |  float64  |
+|  **5**  |    **SibSp**    |    418 non-null    |   int64   |
+|  **6**  |    **Parch**    |    418 non-null    |   int64   |
+|  **7**  |    **Ticket**   |    418 non-null    |   object  |
+|  **8**  |     **Fare**    |    417 non-null    |  float64  |
+|  **9**  |    **Cabin**    |     91 non-null    |   object  |
+|  **10** |   **Embarked**  |    418 non-null    |   object  |
+
 
 ```python
 def createFeatureClass(self, location, name, excludeFields=[]):
